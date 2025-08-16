@@ -1,4 +1,5 @@
 // @ts-check
+import netlify from "@astrojs/netlify";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -6,5 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
+    adapter: netlify(),
   },
 });
+import { defineConfig } from "astro/config";
+import netlify from "@astrojs/netlify";
