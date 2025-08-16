@@ -3,7 +3,7 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
-{hasProjects ? (
+{hasProjects && (
   <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
     <div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
@@ -101,6 +101,8 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
       </div>
     </div>
   </section>
-) : (
+)}
+
+{!hasProjects && (
   <p class="p-8 text-gray-600">No projects yet.</p>
 )}
